@@ -4,7 +4,7 @@ Aplicação de algoritmos iterativos conhecidos para solução de EDO's usando o
 ## Uso
 Clone este repositório, abra o Octave e vá para a pasta com
 ```
-cd <caminho_da_sua_pasta>
+cd <caminho_da_sua_pasta>/src
 ```
 A função Q1 recebe a função em formato simbólico e em função anônima e plota as curvas utilizando os métodos solicitados.
 Para usar a função, abra o Octave e faça na linha de comando:
