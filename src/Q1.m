@@ -45,7 +45,7 @@ function [xxA yyA x y xxPADP yyPADP err errPADP] = Q1(f, g, x0, y0, h, n, i)
   hold off;
   
   % Salvar a figura
-  figure_name = sprintf("figures/figure%d.jpg", 2*i-1);
+  figure_name = sprintf("../figures/figure%d.jpg", 2*i-1);
   print(2*i - 1, figure_name);
 
   % Erros
@@ -73,7 +73,7 @@ function [xxA yyA x y xxPADP yyPADP err errPADP] = Q1(f, g, x0, y0, h, n, i)
   legend('Euler', 'Euler Mel.', 'Euler Mod.', 'V d Houven/Wray', 'Ralston', 'Dorm.-Pr45-Bu', 'ODE45 fixo.', 'ODE45 adap.', 'Location', 'southeast');
   
   % Salvar a figura
-  figure_name = sprintf("figures/figure%d.jpg", 2*i);
+  figure_name = sprintf("../figures/figure%d.jpg", 2*i);
   print(2*i, '-djpg', figure_name);
 
   % Gerando uma tabela
