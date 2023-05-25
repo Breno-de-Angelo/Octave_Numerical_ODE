@@ -1,19 +1,19 @@
 function Q2()
-  figure(10)
-  item31a()
+  figure(1);
+  item31a();
 
-  figure(20)
-  item31b()
+  figure(2);
+  item31b();
 
-  figure(30)
-  item31c()
+  figure(3);
+  item31c();
 
-  figure(40)
-  item32_caso1()
+  figure(4);
+  item32_caso1();
 
-  figure(50)
-  item32_caso2()
+  figure(5);
+  item32_caso2();
 
-  figure(60)
-  item32_caso3()
+  figure(6);
+  item32_caso3();
 endfunction

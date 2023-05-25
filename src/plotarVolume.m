@@ -8,6 +8,9 @@ function plotarVolume(t_vec, y)
   ylim([0, 5000])
   title('Evolução temporal do volume do tanque');
   legend('V', 'V0', 'Vmax');
-  grid on
-  box off
+  grid on;
+  box off;
+  figure_name = sprintf("../figures/figure%d.jpg", i);
+  print(i, figure_name);
+
 endfunction
