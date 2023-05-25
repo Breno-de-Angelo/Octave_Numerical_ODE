@@ -8,14 +8,16 @@
 % Output: plot
 
 
-function [xxA yyA x y xxPADP yyPADP err errPADP] = Q1(f, g, x0, y0, h, n, i)
-
+function [xxA yyA x y xxPADP yyPADP err errPADP] = Q1(f, g, x0, y0, h, n, i, eq)
+  
+  printf("\n\nEquation: %s\n", eq);
+  
   % Solucoes
   [gA xxA yyA] = analytic(f, x0, y0, h/10, n*10); % solucao analitica
-  x0 = double(x0)
-  y0 = double(y0)
-  h = double(h)
-  n = double(n)
+  x0 = double(x0);
+  y0 = double(y0);
+  h = double(h);
+  n = double(n);
   [xxE yyE] = euler(g, x0, y0, h, n); % metodo de euler
   [xxEMe yyEMe] = eulerMelhorado(g, x0, y0, h, n); % metodo de euler melhorado
   [xxEMo yyEMo] = eulerModificado(g, x0, y0, h, n); % metodo de euler modificado
@@ -32,7 +34,7 @@ function [xxA yyA x y xxPADP yyPADP err errPADP] = Q1(f, g, x0, y0, h, n, i)
   hold on;
   xlabel('Eixo X');
   ylabel('Eixo Y');
-  title('Solução');
+  title(sprintf('Solucoes da equacao %s', eq));
   h1 = plot(xxA, yyA, 'bd-');
   h2 = plot(xxE, yyE, 'go-');
   h3 = plot(xxEMe, yyEMe, 'bx-');
@@ -61,7 +63,7 @@ function [xxA yyA x y xxPADP yyPADP err errPADP] = Q1(f, g, x0, y0, h, n, i)
   hold on;
   xlabel('Eixo X')
   ylabel('Eixo Y')
-  title('Erros,Escala Logaritimica');
+  title(sprintf('Erros da equacao %s', eq));
 
   semilogy(xxE(2:end), err(:,1),'go-')
   semilogy(xxEMe(2:end), err(:,2),'bx-')
