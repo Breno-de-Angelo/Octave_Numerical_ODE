@@ -6,7 +6,7 @@ function plotarVolume(t_vec, y, i)
 
   xlabel('t(min)');
   ylabel('V(L)');
-  ylim([0, 5000])
+  ylim([0, 5000]);
   title('Evolução temporal do volume do tanque');
   legend('V', 'V0', 'Vmax');
   grid on;

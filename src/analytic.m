@@ -2,7 +2,7 @@ function [G xx yy] = analytic(f, x0, y0, h, n)
   syms y(x);
   ode = diff(y, x) == f;
   vi = y(x0)==y0;
-  g = rhs(dsolve(ode, vi))
+  g = dsolve(ode, vi)
   G = matlabFunction(g);
   x0 = double(x0);
   y0 = double(y0);
