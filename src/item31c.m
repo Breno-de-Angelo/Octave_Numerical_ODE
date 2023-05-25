@@ -5,5 +5,5 @@ function item31c()
 
   y = volume(Qin_param, Qout_param, t_vec);
 
-  plotarVolume(t_vec, y)
+  plotarVolume(t_vec, y, 11);
 endfunction
