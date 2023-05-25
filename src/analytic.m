@@ -1,5 +1,4 @@
 function [G xx yy] = analytic(f, x0, y0, h, n)
-  % pkg load symbolic;
   syms y(x);
   ode = diff(y, x) == f;
   vi = y(x0)==y0;
