@@ -1,5 +1,5 @@
 function [yC yM] = massa_concentracao(Qin_param, Qout_param, V0_param, c0_param, cin_param, t_vec)
-  syms c(t) Qin Qout V0 cin V(t) m(t) c0
+  syms c(t) Qin Qout V0 cin V(t) m(t) c0;
 
   if(Qin_param == Qout_param)
     deq = diff(c(t), t) == (Qin*(cin - c(t)))/V0;

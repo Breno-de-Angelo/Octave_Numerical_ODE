@@ -11,8 +11,8 @@ function plotarMassaConcentracao(t_vec, y1, y2,  Qin_param, Qout_param)
     hold on
     plot(t_vec, y)
     hold off;
-    line([min(t_vec), max(t_vec)], [2000, 2000], "linestyle", "--")
-    line([min(t_vec), max(t_vec)], [5000, 5000], "linestyle", "--")
+    line([min(t_vec), max(t_vec)], [2000, 2000], "linestyle", "--");
+    line([min(t_vec), max(t_vec)], [5000, 5000], "linestyle", "--");
     grid on
     box off
 
@@ -23,8 +23,8 @@ function plotarMassaConcentracao(t_vec, y1, y2,  Qin_param, Qout_param)
 
     subplot(2, 1, 2)
     plot(t_vec, y1)
-    line([min(t_vec), max(t_vec)], [c0_param, c0_param], "linestyle", "--")
-    line([min(t_vec), max(t_vec)], [cin_param, cin_param], "linestyle", "--")
+    line([min(t_vec), max(t_vec)], [c0_param, c0_param], "linestyle", "--");
+    line([min(t_vec), max(t_vec)], [cin_param, cin_param], "linestyle", "--");
     grid on
     box off
 
