@@ -12,6 +12,10 @@ function [xxA yyA x y xxPADP yyPADP err errPADP] = Q1(f, g, x0, y0, h, n, i)
 
   % Solucoes
   [gA xxA yyA] = analytic(f, x0, y0, h/10, n*10); % solucao analitica
+  x0 = double(x0)
+  y0 = double(y0)
+  h = double(h)
+  n = double(n)
   [xxE yyE] = euler(g, x0, y0, h, n); % metodo de euler
   [xxEMe yyEMe] = eulerMelhorado(g, x0, y0, h, n); % metodo de euler melhorado
   [xxEMo yyEMo] = eulerModificado(g, x0, y0, h, n); % metodo de euler modificado
